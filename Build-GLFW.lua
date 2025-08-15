@@ -1,8 +1,7 @@
 project "GLFW"
 	kind "StaticLib"
 	language "C"
-	staticruntime "On"
-	warnings "off"
+	staticruntime "on"
 
 	targetdir ("../../../Binaries/" .. OutputDir .. "/%{prj.name}")
 	objdir ("../../../Binaries/Intermediates/" .. OutputDir .. "/%{prj.name}")
@@ -110,7 +109,7 @@ project "GLFW"
 
 	filter "configurations:Release"
 		runtime "Release"
-		optimize "speed"
+		optimize "on"
 
     filter "configurations:Dist"
 		runtime "Release"
